@@ -67,15 +67,16 @@
             </HBox>
          </children>
       </VBox>
-      <TableView fx:id="tblStudents" layoutX="15.0" layoutY="310.0" onKeyReleased="#tblStudentsOnKeyReleased" prefHeight="297.0" prefWidth="727.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="310.0">
+      <TableView fx:id="tblStudents" layoutX="15.0" layoutY="310.0" onKeyReleased="#tblStudentsOnKeyReleased" prefHeight="265.0" prefWidth="727.0" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="310.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="75.0" styleClass="center" text="ID" />
           <TableColumn prefWidth="125.0" text="FIRST NAME" />
             <TableColumn prefWidth="125.0" text="LAST NAME" />
             <TableColumn prefWidth="184.0" text="ADDRESS" />
-            <TableColumn prefWidth="95.0" text="GENDER" />
-            <TableColumn prefWidth="95.0" text="DOB" />
+            <TableColumn prefWidth="95.0" styleClass="center" text="GENDER" />
+            <TableColumn prefWidth="95.0" styleClass="center" text="DOB" />
         </columns>
       </TableView>
+      <TextField fx:id="txtSearch" alignment="CENTER" layoutX="15.0" layoutY="584.0" prefHeight="28.0" prefWidth="727.0" promptText="Enter something to search" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
    </children>
 </AnchorPane>

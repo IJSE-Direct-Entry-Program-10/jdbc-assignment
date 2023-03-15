@@ -41,6 +41,18 @@
 }
 
 .invalid {
-    -fx-border-color: red;
+    -fx-border-color: red !important;
     -fx-text-fill: red;
+}
+
+.center {
+    -fx-alignment: center;
+}
+
+.text-field.invalid:focused, #txtDOB.invalid:focused {
+    -fx-border-color: red;
+}
+
+.radio-button {
+    -fx-border-width: 0;
 }
