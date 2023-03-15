@@ -1,8 +1,12 @@
 package lk.ijse.dep10.assignment.controller;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCodeCombination;
+import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 
@@ -33,6 +37,12 @@ public class StudentViewController {
         lblLastName.setLabelFor(txtLastName);
         lblAddress.setLabelFor(txtAddress);
         lblDOB.setLabelFor(txtDOB);
+
+        Platform.runLater(() -> {
+            root.getScene().getAccelerators().put(new KeyCodeCombination(KeyCode.N, KeyCombination.CONTROL_ANY), () -> btnNewStudent.fire());
+            root.getScene().getAccelerators().put(new KeyCodeCombination(KeyCode.S, KeyCombination.CONTROL_ANY), () -> btnSaveStudent.fire());
+            root.getScene().getAccelerators().put(new KeyCodeCombination(KeyCode.F1), () -> tblStudents.requestFocus());
+        });
     }
 
     public void btnDeleteStudentOnAction(ActionEvent event) {
@@ -41,12 +51,12 @@ public class StudentViewController {
 
 
     public void btnNewStudentOnAction(ActionEvent event) {
-
+        System.out.println("New Student");
     }
 
 
     public void btnSaveStudentOnAction(ActionEvent event) {
-
+        System.out.println("Save Student");
     }
 
     public void tblStudentsOnKeyReleased(KeyEvent keyEvent) {
