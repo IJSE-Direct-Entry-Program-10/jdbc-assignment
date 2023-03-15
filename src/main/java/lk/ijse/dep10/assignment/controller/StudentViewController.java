@@ -38,6 +38,7 @@ public class StudentViewController {
         lblAddress.setLabelFor(txtAddress);
         lblDOB.setLabelFor(txtDOB);
 
+        /* Setup keyboard shortcuts */
         Platform.runLater(() -> {
             root.getScene().getAccelerators().put(new KeyCodeCombination(KeyCode.N, KeyCombination.CONTROL_ANY), () -> btnNewStudent.fire());
             root.getScene().getAccelerators().put(new KeyCodeCombination(KeyCode.S, KeyCombination.CONTROL_ANY), () -> btnSaveStudent.fire());
